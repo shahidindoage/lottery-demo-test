@@ -36,6 +36,7 @@ export async function GET(req) {
     const header = [
       'Customer ID',
       'Name',
+      'Email',
       'Phone',
       'Accepted Terms',
       'Winner',
@@ -44,6 +45,7 @@ export async function GET(req) {
     const rows = submissions.map((s) => [
       s.uniqueId,
       s.name,
+      s.email,
       s.phone,
       s.accepted_terms ? 'Yes' : 'No',
       s.winner === 1 ? 'Winner' : 'No',
